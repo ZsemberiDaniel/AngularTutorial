@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="form-group">
+      <label for="">Acoount name</label>
+      <input type="text" class="form-control" #accountName>
+    </div>
+    <div class="form-group">
+      <select class="form-control" #accountType>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="hidden">Hidden</option>
+      </select>
+    </div>
+    <button class="btn btn-primary" (click)="addAccount()">Add account</button>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h2>Active Users</h2>
+    <ul class="list-group">
+      <app-a5-user *ngFor="let user of usersService.getActiveUsers()" [user]="user"></app-a5-user>
+    </ul>
+  </div>
+  <div class="row">
+    <h2>Inactive Users</h2>
+    <ul class="list-group">
+      <app-a5-user *ngFor="let user of usersService.getInactiveUsers()" [user]="user"></app-a5-user>
+    </ul>
+  </div>
+</div>

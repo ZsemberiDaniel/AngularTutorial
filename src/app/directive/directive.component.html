@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="showOdds = !showOdds">Only show odd numbers</button>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let number of numbers">{{ number }}</li>
+      </ul>
+      <p *appUnless="showOdds">Only evens should be shown now. But odds are there as well ¯\_(ツ)_/¯</p>
+      
+      <p appBasicHighlight>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore vitae, delectus tempora accusantium ipsam, ipsa mollitia inventore autem id quibusdam, cumque dignissimos dolore, animi repellendus consequuntur minima nesciunt explicabo!</p>
+      <p appBetterHighlight [highlightBckgrndClr]="'yellow'" [highlightClr]="'red'" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas tempore vitae, delectus tempora accusantium ipsam, ipsa mollitia inventore autem id quibusdam, cumque dignissimos dolore, animi repellendus consequuntur minima nesciunt explicabo!</p>
+    </div>
+  </div>
+</div>

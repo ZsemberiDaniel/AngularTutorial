@@ -1,0 +1,10 @@
+<button 
+  class="btn"
+  (click)="onButtonPressed()">Display Details</button>
+<p *ngIf="displayDetails">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident optio, numquam consequuntur ea autem, error obcaecati iure neque illum libero velit eos laudantium laboriosam, eveniet aspernatur, necessitatibus suscipit accusamus eum.</p>
+<div 
+  *ngFor="let log of buttonClickLog; let i = index" 
+  [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'white' }"
+  [ngClass]="{ 'white': i >= 5 }">
+    {{ i + ': ' + log.date }}
+</div>

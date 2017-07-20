@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="cols-xs-12">
+      <div class="form-group">
+        <label for="serverName">Server name:</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          id="serverName" 
+          placeholder="Name" 
+          [(ngModel)]="serverName"
+          #serverNameInput> <!-- local reference, can only be used in this template as a varianle-->
+      </div>
+      <div class="form-group">
+        <label for="serverContent">Server content:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="serverContent"
+          placeholder="Conent"
+          [(ngModel)]="serverContent"
+          #serverContentInput>
+      </div>
+      <div class="form-group">
+        <button 
+          class="btn btn-success" 
+          (click)="onAddServer()">Add server</button>
+        <button 
+          class="btn btn-primary" 
+          (click)="onAddBlueprint()">Add blueprint</button>
+      </div>
+    </div>
+  </div>
+</div>

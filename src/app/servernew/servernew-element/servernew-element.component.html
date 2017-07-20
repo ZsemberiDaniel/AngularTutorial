@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <p class="lead"><strong>{{ element.name }}</strong></p>
+    </div>
+    <div class="panel-body">
+      <p [ngStyle]="{ color: isTypeServer() ? 'blue' : 'red' }">{{ element.content }}</p>
+    </div>
+    <ng-content></ng-content> <!-- Content from between the opening ang closing tags of this component will be added here -->
+  </div>
+</div>

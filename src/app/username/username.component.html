@@ -1,0 +1,4 @@
+<input 
+  tpye="text"
+  [(ngModel)]="username" >
+<button class="btn" [disabled]="!isUsernameViable()" (click)="username = ''">Register</button>

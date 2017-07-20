@@ -1,0 +1,6 @@
+<div class="row">
+  <span>Odd numbers:</span>
+  <span *ngFor="let n of numbers" [ngClass]="{ prime: isPrime(n) }">
+    {{ n }}
+  </span>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+    <app-servernew-input (serverCreated)="onAdded($event)"></app-servernew-input>
+    <div class="row">
+        <div class="col-xs-12">
+            <app-servernew-element
+                *ngFor="let sElement of serverElements" 
+                [element]="sElement">
+
+                <!-- This is possible via the <ng-content></ng-content> tags -->
+                <div class="panel-footer">
+                    <small><em>This is a footer from the parent component. Wow</em></small>
+                </div>
+
+            </app-servernew-element>
+        </div>
+    </div>
+</div>
