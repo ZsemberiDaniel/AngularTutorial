@@ -1,3 +1,9 @@
+import { ServerResolver } from './routing/routing-servers/server-resolver-service';
+import { CanDeactivateGuard } from './routing/routing-servers/routing-edit-server/can-deactivate-guard.service';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
+
+import { AppRoutingModule } from './app-routing.module';
 import { A5UserComponent } from './assignment5/a5-user/a5-user.component';
 import { UnlessDirective } from './directive/unless/unless.directive';
 import { BetterHighlightDirective } from './directive/better-highlight/better-highlight.directive';
@@ -25,9 +31,27 @@ import { AccountComponent } from './account/account.component';
 import { AccountInstanceComponent } from './account/account-instance/account-instance.component';
 import { AccountInputComponent } from './account/account-input/account-input.component';
 import { Assignment5Component } from './assignment5/assignment5.component';
+import { RoutingComponent } from './routing/routing.component';
+
+import { RoutingHomeComponent } from './routing/routing-home/routing-home.component';
+import { RoutingUsersComponent } from './routing/routing-users/routing-users.component';
+import { RoutingServersComponent } from './routing/routing-servers/routing-servers.component';
+import { RoutingUserComponent } from './routing/routing-users/routing-user/routing-user.component';
+import { RoutingEditServerComponent } from './routing/routing-servers/routing-edit-server/routing-edit-server.component';
+import { RoutingServerComponent } from './routing/routing-servers/routing-server/routing-server.component';
+import { RoutingServersService } from './routing/routing-servers/routing-servers.service';
+
+import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
+import { ErrorPageComponent } from './routing/error-page/error-page.component';
 
 @NgModule({
   declarations: [
+    RoutingHomeComponent,
+    RoutingUsersComponent,
+    RoutingServersComponent,
+    RoutingUserComponent,
+    RoutingEditServerComponent,
+    RoutingServerComponent,
     AppComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
@@ -50,13 +74,17 @@ import { Assignment5Component } from './assignment5/assignment5.component';
     AccountInputComponent,
     AccountInstanceComponent,
     Assignment5Component,
-    A5UserComponent
+    A5UserComponent,
+    RoutingComponent,
+    PageNotFoundComponent,
+    ErrorPageComponent
 ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard, CanDeactivateGuard, RoutingServersService, ServerResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
