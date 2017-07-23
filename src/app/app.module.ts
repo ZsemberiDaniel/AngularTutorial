@@ -10,7 +10,7 @@ import { BetterHighlightDirective } from './directive/better-highlight/better-hi
 import { BasicHighlighDirective } from './directive/basic-highlight/basic-highlight.directive';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WarningAlertComponent } from './warning_alert/warning_alert.component';
@@ -43,6 +43,11 @@ import { RoutingServersService } from './routing/routing-servers/routing-servers
 
 import { PageNotFoundComponent } from './routing/page-not-found/page-not-found.component';
 import { ErrorPageComponent } from './routing/error-page/error-page.component';
+import { ObservablesComponent } from './observables/observables.component';
+import { TdFormComponent } from './td-form/td-form.component';
+import { Assignment6Component } from './assignment6/assignment6.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { Assignment7Component } from './assignment7/assignment7.component';
 
 @NgModule({
   declarations: [
@@ -77,12 +82,18 @@ import { ErrorPageComponent } from './routing/error-page/error-page.component';
     A5UserComponent,
     RoutingComponent,
     PageNotFoundComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    ObservablesComponent,
+    TdFormComponent,
+    Assignment6Component,
+    ReactiveFormComponent,
+    Assignment7Component
 ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService, AuthGuard, CanDeactivateGuard, RoutingServersService, ServerResolver],
   bootstrap: [AppComponent]
