@@ -1,3 +1,5 @@
+import { FilterPipe } from './pipes/filter.pipe';
+import { ShortenPipe } from './pipes/shorten.pipe';
 import { ServerResolver } from './routing/routing-servers/server-resolver-service';
 import { CanDeactivateGuard } from './routing/routing-servers/routing-edit-server/can-deactivate-guard.service';
 import { AuthGuard } from './auth-guard.service';
@@ -48,6 +50,11 @@ import { TdFormComponent } from './td-form/td-form.component';
 import { Assignment6Component } from './assignment6/assignment6.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { Assignment7Component } from './assignment7/assignment7.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+import { HttpComponent } from './http/http.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -87,11 +94,18 @@ import { Assignment7Component } from './assignment7/assignment7.component';
     TdFormComponent,
     Assignment6Component,
     ReactiveFormComponent,
-    Assignment7Component
+    Assignment7Component,
+    PipesComponent,
+    ShortenPipe,
+    FilterPipe,
+    ReversePipe,
+    SortPipe,
+    HttpComponent
 ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
